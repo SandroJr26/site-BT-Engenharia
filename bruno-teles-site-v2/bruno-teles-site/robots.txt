@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://brunoteles.com.br/sitemap.xml

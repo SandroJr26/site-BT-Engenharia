@@ -1,0 +1,358 @@
+.hero {
+  height: 100vh;
+  background-color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  max-width: 600px;
+  position: relative; /* Added for z-index context */
+  z-index: 3; /* Ensure content is above overlay */
+}
+
+.hero-subtitle {
+  color: var(--accent-color);
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw + 1rem, 3.5rem); /* Responsive font size */
+  color: var(--dark-color);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.1; /* Adjusted line height */
+  font-weight: 700;
+}
+
+.hero-description {
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-lg);
+  max-width: 500px; /* Limit width for better readability */
+}
+
+.hero-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--light-color) 40%, transparent 70%);
+  z-index: 1;
+}
+
+/* Sobre */
+.about {
+  background-color: var(--white);
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.about-image {
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-content {
+  padding: var(--spacing-lg);
+}
+
+.about-title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--dark-color);
+}
+
+.about-subtitle {
+  color: var(--accent-color);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.about-description {
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.about-stat {
+  text-align: center;
+}
+
+.about-stat-number {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.about-stat-text {
+  color: var(--secondary-color);
+  font-size: var(--font-size-sm);
+}
+
+/* Serviços */
+.services {
+  background-color: var(--light-color);
+}
+
+/* Projetos */
+.projects {
+  background-color: var(--white);
+}
+
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.project-filter {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.project-filter:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+.project-filter.active {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Depoimentos */
+.testimonials {
+  background-color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-container {
+  position: relative;
+  z-index: 2;
+}
+
+.testimonial-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonial-slide {
+  padding: 0 var(--spacing-md);
+}
+
+.testimonial-controls {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+}
+
+.testimonial-control {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.testimonial-control:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Contato */
+.contact {
+  background-color: var(--white);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+}
+
+.contact-info {
+  padding: var(--spacing-lg);
+}
+
+.contact-title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--dark-color);
+}
+
+.contact-description {
+  color: var(--secondary-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.contact-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: var(--font-size-lg);
+}
+
+.contact-text {
+  color: var(--secondary-color);
+}
+
+.contact-text strong {
+  display: block;
+  color: var(--dark-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.contact-form {
+  background-color: var(--white);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  color: var(--dark-color);
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-md);
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(139, 115, 85, 0.2);
+}
+
+.form-control::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+textarea.form-control {
+  min-height: 150px;
+  resize: vertical;
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .about-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    padding: 120px 0 60px;
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0.9) 0%, rgba(245, 245, 245, 0.7) 100%);
+  }
+  
+  .hero-image {
+    width: 100%;
+    opacity: 0.3;
+  }
+  
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .project-filters {
+    flex-wrap: wrap;
+  }
+}
